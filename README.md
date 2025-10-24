@@ -143,7 +143,7 @@ npm start
 ```
 
 O frontend será executado em:
-👉 [http://localhost:3000](http://localhost:3000)
+👉 [http://localhost:3000](http://localhost:3000) Ou simplesmente no ambiente que já foi feito deploy: [https://cinescore-front.vercel.app/](https://cinescore-front.vercel.app/)
 
 ## 🧭 Principais Funcionalidades
 
