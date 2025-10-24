@@ -1,0 +1,45 @@
+.movie-card {
+  text-align: center;
+  cursor: pointer;
+  background-color: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-bottom: 1px solid #222;
+}
+
+.movie-card h3 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 10px 8px 4px;
+}
+
+.movie-card p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.movie-info {
+  padding: 8px;
+  text-align: center;
+}
+
+.movie-rating {
+  font-weight: bold;
+  color: #f5c518; /* cor dourada tipo IMDb */
+  margin-top: 4px;
+}

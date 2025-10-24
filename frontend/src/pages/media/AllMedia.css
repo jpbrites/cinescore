@@ -1,0 +1,241 @@
+.movies-container {
+  padding: 20px;
+  color: #fff;
+  background-color: #0d0d0d;
+  min-height: 100vh;
+}
+
+.movies-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 16px;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+.movie-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.movie-card p {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e50914;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.pagination button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #ccc;
+}
+
+/* === Select moderno === */
+.select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #222;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  color: #fff;
+}
+
+.select-wrapper .icon {
+  color: #f39c12;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.select-wrapper select {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+
+.select-wrapper select option {
+  background: #111;
+  color: #fff;
+}
+
+/* === Search bar === */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #222;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.search-bar:hover {
+  background: #2d2d2d;
+}
+
+.search-bar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+}
+
+.search-bar .icon {
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.search-bar .search-icon {
+  color: #f39c12;
+  margin-right: 0.4rem;
+}
+
+.search-bar .search-icon:hover {
+  color: #ffa500;
+}
+
+.search-bar .clear-icon {
+  color: #e74c3c;
+  margin-left: 0.4rem;
+}
+
+.search-bar .clear-icon:hover {
+  color: #ff6b6b;
+}
+
+/* ===== PAGINAÇÃO MODERNA ===== */
+
+.pagination-modern {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  gap: 10px;
+}
+
+.pagination-modern .page-number,
+.pagination-modern .page-arrow {
+  background: #141414;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.pagination-modern .page-number:hover,
+.pagination-modern .page-arrow:hover {
+  background: #ff6600;
+  transform: scale(1.05);
+}
+
+.pagination-modern .page-number.active {
+  background: #ff6600;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.pagination-modern .page-arrow[disabled],
+.pagination-modern .page-number[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 600px) {
+  .pagination-modern {
+    gap: 6px;
+  }
+  .pagination-modern .page-number,
+  .pagination-modern .page-arrow {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .filters {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .search-bar {
+    width: auto;
+}
+.select-wrapper select {
+  padding-right: 50%;
+}
+}

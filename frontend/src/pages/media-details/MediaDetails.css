@@ -1,0 +1,340 @@
+.media-details {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* ===== BANNER ===== */
+.media-details .banner {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 90.8px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.media-details .banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.media-details .banner .details-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px;
+}
+
+.media-details .banner img.poster {
+  width: 210px;
+  height: 310px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.media-details .banner .details {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.media-details .banner .details span {
+  font-weight: bold;
+  font-size: 2.8em;
+  color: #fff;
+}
+
+.media-details .banner .details p {
+  font-size: 16px;
+  color: #ddd;
+  margin: 10px 0;
+}
+
+.media-details .banner .details strong {
+  color: #f5c518;
+}
+
+/* ===== TABS ===== */
+.media-details .tabs {
+  display: flex;
+  justify-content: center;
+  padding: 20px 60px;
+}
+
+.media-details .tabs button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #ddd;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.media-details .tabs button.active {
+  color: #f5c518;
+  border-bottom: 2px solid #f5c518;
+}
+
+.media-details .tabs button:hover {
+  color: #f5c518;
+}
+
+/* ===== REVIEW FORM ===== */
+.media-details .reviews-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 60px;
+}
+
+.media-details .reviews-container h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.media-details .already-reviewed {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-details .already-reviewed p {
+  color: #ddd;
+  font-size: 18px;
+}
+
+.media-details .already-reviewed button {
+  padding: 10px 15px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #333;
+  color: #f5c518;
+}
+
+.media-details form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.media-details form label {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.media-details form textarea {
+  width: 500px;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #555;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background-color: #222;
+  color: #fff;
+  resize: none;
+  height: 150px;
+}
+
+.media-details form textarea:focus {
+  border-color: #f5c518;
+  outline: none;
+}
+
+.media-details form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1em;
+  color: #fff;
+  font-weight: bold;
+  background-color: #f5c518;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.media-details form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== REVIEWS ===== */
+.media-details .all-reviews {
+  margin: 10px 90px;
+}
+
+.media-details .all-reviews .no-reviews {
+  font-size: 18px;
+  margin-bottom: 100px;
+  color: #ddd;
+}
+
+.media-details .review {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.media-details .review .user {
+  background-color: #ccc;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-details .review .user i {
+  font-size: 24px;
+  color: #333;
+}
+
+.media-details .review .data-review {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1000px;
+}
+
+.media-details .review .data-review p,
+.media-details .review .data-review em {
+  color: #ddd;
+}
+
+.media-details .review .name-label {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.media-details .review .stars .star {
+  font-size: 1.5rem;
+  color: #f5c518;
+}
+
+.favorite-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #ff4500;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favorite-btn:hover {
+  background-color: #e63e00;
+  transform: scale(1.05);
+}
+
+.rating {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f5c518; /* dourado tipo IMDb */
+  margin: 8px 0;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets e telas médias */
+@media (max-width: 1085px) {
+  
+  .media-details .banner .details-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .media-details .banner img.poster {
+    width: 180px;
+    height: 270px;
+    margin-bottom: 20px;
+  }
+
+  .media-details .banner .details {
+    margin-left: 0;
+    align-items: center;
+    padding: 10px;
+    max-width: 90%;
+  }
+
+  .media-details .banner .details span {
+    font-size: 2.2em;
+  }
+
+  .media-details .banner .details p {
+    font-size: 15px;
+  }
+}
+
+/* Celulares e telas pequenas */
+@media (max-width: 600px) {
+  .media-details .banner {
+    height: auto;
+    background-position: center top;
+  }
+
+  .media-details .banner .details-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .media-details .banner img.poster {
+    width: 150px;
+    height: 220px;
+    margin-bottom: 15px;
+  }
+
+  .media-details .banner .details {
+    padding: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .media-details .banner .details span {
+    font-size: 1.8em;
+  }
+
+  .media-details .banner .details p {
+    font-size: 14px;
+  }
+
+  .favorite-btn {
+    width: 80%;
+    margin: 15px auto 0;
+  }
+}
