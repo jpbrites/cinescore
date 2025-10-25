@@ -67,28 +67,34 @@ npm install
 
 1. Dentro do projeto, clique em **Create a Cluster** ou **Create**
 <img width="1919" height="900" alt="image" src="https://github.com/user-attachments/assets/09b7f421-17dc-4c56-8cc6-1cf90ebe4319" />
-3. Escolha a opção **Free Tier (M0)**
-4. Mantenha as configurações padrão e crie o cluster
-5. Aguarde a criação (pode levar alguns minutos)
 
-### Etapa 3 — Criar um usuário de banco
+2. Escolha a opção Free
+<img width="1918" height="901" alt="image" src="https://github.com/user-attachments/assets/239f249e-4b78-40d2-8b30-266a5db729d4" />
 
-1. Vá em **Database Access** → **Add New Database User**
-2. Escolha um username e password (exemplo: `cinescore_user` / `SenhaForte123!`)
-3. Selecione **Read and write to any database**
-4. Clique em **Add User**
+3. Mantenha as configurações padrão e crie o cluster
 
-### Etapa 4 — Permitir acesso de IP
+4. Aguarde a criação (pode levar alguns minutos)
 
-1. Vá em **Network Access** → **Add IP Address**
-2. Adicione `0.0.0.0/0` para permitir acesso de qualquer IP (recomendado para testes e avaliação)
 
-3. Salve as alterações
+### Etapa 3 — Escolha do Método de conexão e Usuário de banco
 
-### Etapa 5 — Obter a string de conexão
+1. Inicialmente ele irá gerar um usuário de banco, salve o usuário e senha, e clique em 'create a database user'
+<img width="828" height="529" alt="image" src="https://github.com/user-attachments/assets/111ba3cb-9a08-4380-a163-d74512766c09" />
 
-1. Vá em **Clusters** → **Connect** → **Connect your application**
-2. Copie a connection string, que será parecida com isto:
+2. Em seguida no método de conexão, escolha a opção **Drivers**
+<img width="835" height="841" alt="image" src="https://github.com/user-attachments/assets/ffaa9bdc-7934-47ce-8728-4c7c59d36eb5" />
+
+3. Em seguida clique em **Done**
+<img width="801" height="905" alt="image" src="https://github.com/user-attachments/assets/aad28ebd-acc4-42b8-9964-1adc127fc474" />
+
+### Etapa 4 — Criando a database
+
+1. No menu **Data explorer**, clique em **Create Database**
+<img width="1919" height="910" alt="image" src="https://github.com/user-attachments/assets/76c6d2a5-d8d6-47fe-b52f-5a4e9c3cfbfe" />
+
+3. Coloque os nomes como na imagem e salve
+<img width="632" height="436" alt="image" src="https://github.com/user-attachments/assets/c8794233-ddc2-4b9c-8a3f-acd248974db5" />
+
 
 ```
 mongodb+srv://<username>:<password>@cluster0.lb5gqyh.mongodb.net/filmes?retryWrites=true&w=majority
