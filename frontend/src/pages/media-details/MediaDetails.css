@@ -7,7 +7,6 @@
   color: #fff;
 }
 
-/* ===== BANNER ===== */
 .media-details .banner {
   position: relative;
   width: 100%;
@@ -71,7 +70,6 @@
   color: #f5c518;
 }
 
-/* ===== TABS ===== */
 .media-details .tabs {
   display: flex;
   justify-content: center;
@@ -99,7 +97,6 @@
   color: #f5c518;
 }
 
-/* ===== REVIEW FORM ===== */
 .media-details .reviews-container {
   display: flex;
   flex-direction: column;
@@ -184,7 +181,6 @@
   cursor: not-allowed;
 }
 
-/* ===== REVIEWS ===== */
 .media-details .all-reviews {
   margin: 10px 90px;
 }
@@ -262,13 +258,10 @@
 .rating {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #f5c518; /* dourado tipo IMDb */
+  color: #f5c518; 
   margin: 8px 0;
 }
 
-/* ===== RESPONSIVIDADE ===== */
-
-/* Tablets e telas médias */
 @media (max-width: 1085px) {
   
   .media-details .banner .details-container {
@@ -300,7 +293,6 @@
   }
 }
 
-/* Celulares e telas pequenas */
 @media (max-width: 600px) {
   .media-details .banner {
     height: auto;

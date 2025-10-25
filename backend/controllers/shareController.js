@@ -1,15 +1,12 @@
-// controllers/shareController.js
 import crypto from "crypto";
 import User from "../models/User.js";
 
-// Gera ou retorna link de compartilhamento
 export const generateShareLink = async (req, res) => {
   try {
-    const userId = req.userId; // vem do token JWT (authMiddleware)
+    const userId = req.userId; 
     const user = await User.findById(userId);
     if (!user) return res.status(404).json({ message: "Usuário não encontrado." });
 
-    // se já existir token, reutiliza
     if (!user.shareToken) {
       user.shareToken = crypto.randomBytes(8).toString("hex");
       await user.save();
@@ -23,7 +20,6 @@ export const generateShareLink = async (req, res) => {
   }
 };
 
-// Acessa lista pública via token
 export const getSharedFavorites = async (req, res) => {
   try {
     const { token } = req.params;

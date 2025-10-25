@@ -1,8 +1,6 @@
-// controllers/favoritesController.js
 import FavoriteList from "../models/FavoriteList.js";
 import User from "../models/User.js";
 
-// Obter lista de favoritos do usuário
 export const getFavoriteList = async (req, res) => {
   try {
     const { userId } = req.params;
@@ -17,7 +15,6 @@ export const getFavoriteList = async (req, res) => {
   }
 };
 
-// Adicionar um filme aos favoritos
 export const addFavorite = async (req, res) => {
   try {
     const { userId, movieData } = req.body;
@@ -39,7 +36,6 @@ export const addFavorite = async (req, res) => {
   }
 };
 
-// Remover um filme dos favoritos
 export const removeFavorite = async (req, res) => {
   try {
     const { userId, movieId } = req.params;

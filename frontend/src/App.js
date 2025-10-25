@@ -15,10 +15,8 @@ import Cookies from "js-cookie";
 export default function App() {
   const location = useLocation();
 
-  // Rotas onde o Header não deve aparecer
   const hideHeaderRoutes = ["/register", "/login"];
 
-  // Esconde o header também se o path começar com "/favorites/share"
   const shouldHideHeader =
     hideHeaderRoutes.includes(location.pathname) ||
     location.pathname.startsWith("/favorites/share");

@@ -1,7 +1,6 @@
-// src/api.js
 import Cookies from "js-cookie";
 
-const API_URL = "http://localhost:5000/api"; // backend local
+const API_URL = "http://localhost:5000/api"; 
 
 export async function registerUser(data) {
   const response = await fetch("http://localhost:5000/api/auth/register", {
@@ -62,7 +61,6 @@ export async function getMovieDetails(id) {
 }
 
 
-// 🔥 FAVORITOS
 export const getFavorites = async (userId) => {
   try {
     const res = await fetch(`${API_URL}/favorites/${userId}`);

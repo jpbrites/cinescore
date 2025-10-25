@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { registerUser } from "../../api";
-import ModalMessage from "../../components/modal-message/ModalMessage"; // caminho simplificado
+import ModalMessage from "../../components/modal-message/ModalMessage"; 
 import "./Register.css";
 
 function Register() {
@@ -23,7 +23,6 @@ function Register() {
     e.preventDefault();
     setLoading(true);
 
-    // 🔹 Validação de senha
     if (password !== confPassword) {
       showModal("As senhas não coincidem. Tente novamente.", "error");
       setLoading(false);
@@ -31,12 +30,10 @@ function Register() {
     }
 
     try {
-      // 🔹 Chamada para API
       await registerUser({ name, email, password });
 
       showModal("Usuário registrado com sucesso! Redirecionando...", "success");
 
-      // Redireciona após sucesso
       setTimeout(() => navigate("/login"), 2000);
     } catch (error) {
       console.error("Erro ao registrar:", error);
@@ -108,7 +105,6 @@ function Register() {
         </form>
       </div>
 
-      {/* 🔹 ModalMessage reutilizado */}
       {modal.show && (
         <ModalMessage
           message={modal.message}

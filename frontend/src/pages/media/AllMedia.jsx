@@ -18,7 +18,7 @@ function Movies() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(false);
-  const [isSearching, setIsSearching] = useState(false); // novo estado
+  const [isSearching, setIsSearching] = useState(false); 
 
  const fetchMovies = async (page = 1) => {
   try {
@@ -54,7 +54,6 @@ function Movies() {
     fetchCategories();
   }, [type]);
 
-  // 🔹 Buscar filmes/séries ou resultados da busca
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -77,7 +76,6 @@ function Movies() {
 
     fetchData();
   }, [currentPage, type, selectedCategory, isSearching]); 
-  // ✅ searchQuery REMOVIDO daqui
 
   const handleSearch = () => {
     if (searchQuery.trim()) {
@@ -95,7 +93,7 @@ function Movies() {
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);
     setCurrentPage(1);
-    setIsSearching(false); // se mudar categoria, sai do modo busca
+    setIsSearching(false); 
   };
 
   const nextPage = () => {

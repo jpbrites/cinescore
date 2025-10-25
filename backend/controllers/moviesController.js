@@ -15,7 +15,6 @@ export const getAllMedia = async (req, res) => {
   }
 
   try {
-    // Se tiver genre, adiciona &with_genres=... na URL
     const genreQuery = genre ? `&with_genres=${genre}` : "";
 
     const response = await axios.get(
@@ -45,7 +44,6 @@ export const getAllCategories = async (req, res) => {
       `https://api.themoviedb.org/3/genre/${type}/list?api_key=${TMDB_API_KEY}&language=pt-BR`
     );
 
-    // Retorna apenas os gêneros
     res.json(response.data.genres);
   } catch (error) {
     console.error(`Erro ao buscar categorias:`, error.message);

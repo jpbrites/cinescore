@@ -9,10 +9,8 @@ const router = express.Router();
 router.post("/register", register);
 router.post("/login", login);
 
-// 🔹 Gerar link de compartilhamento
 router.post("/share", authMiddleware, generateShareLink);
 
-// Adicionar favorito
 router.post("/favorites", authMiddleware, async (req, res) => {
   const { id, title, poster_path, type } = req.body;
   const user = await User.findById(req.userId);
@@ -27,7 +25,6 @@ router.post("/favorites", authMiddleware, async (req, res) => {
   res.json(user.favorites);
 });
 
-// Remover favorito
 router.delete("/favorites/:id", authMiddleware, async (req, res) => {
   const user = await User.findById(req.userId);
   user.favorites = user.favorites.filter((m) => m.id != req.params.id);
@@ -35,7 +32,6 @@ router.delete("/favorites/:id", authMiddleware, async (req, res) => {
   res.json(user.favorites);
 });
 
-// Listar favoritos
 router.get("/favorites", authMiddleware, async (req, res) => {
   const user = await User.findById(req.userId);
   res.json(user.favorites);

@@ -12,13 +12,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Conexão com MongoDB
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB conectado"))
   .catch((err) => console.error("Erro ao conectar ao MongoDB:", err));
 
-// Rotas
 app.use("/api/auth", authRoutes);
 app.use("/api/movies", moviesRoutes);
 app.use("/api/favorites", favoritesRoutes);

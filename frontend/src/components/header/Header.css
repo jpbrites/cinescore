@@ -15,7 +15,6 @@
   height: 70px;
 }
 
-/* Ícone do menu (mobile) */
 .menu-toggle {
   margin-right: 30px;
     z-index: 1002;
@@ -25,7 +24,6 @@
   cursor: pointer;
 }
 
-/* Navegação normal (desktop) */
 .nav-desktop {
   display: flex;
   justify-content: space-between;
@@ -95,7 +93,6 @@
   border: 2px solid #ff6600;
 }
 
-/* Área do usuário */
 .conj-user {
   display: flex;
   align-items: center;
@@ -132,7 +129,6 @@
   cursor: not-allowed;
 }
 
-/* --- MENU LATERAL MOBILE --- */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -183,7 +179,6 @@
   gap: 10px;
 }
 
-/* --- RESPONSIVIDADE --- */
 @media (max-width: 900px) {
   .nav-desktop,
   .conj-buttons,

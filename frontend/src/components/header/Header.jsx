@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/logo_cine.png";
-import { Menu, X } from "lucide-react"; // biblioteca de ícones shadcn/lucide-react
+import { Menu, X } from "lucide-react"; 
 
 export default function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -42,7 +42,6 @@ export default function Header() {
         <img src={logo} alt="CineScore" />
       </div>
 
-      {/* Ícone de menu (visível apenas no mobile) */}
       <button
         className="menu-toggle"
         onClick={() => setMenuOpen((prev) => !prev)}
@@ -50,7 +49,6 @@ export default function Header() {
         {menuOpen ? <X size={28} color="#fff" /> : <Menu size={28} color="#fff" />}
       </button>
 
-      {/* Navegação normal (desktop) */}
       <nav className="nav-desktop">
         <Link to="/">Início</Link>
         <Link to="/movies">Filmes</Link>
@@ -58,7 +56,6 @@ export default function Header() {
         <Link to="/favorites">Meus Favoritos</Link>
       </nav>
 
-      {/* Menu lateral (mobile) */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <nav>
           <Link to="/" onClick={() => setMenuOpen(false)}>Início</Link>
@@ -93,7 +90,6 @@ export default function Header() {
         </nav>
       </div>
 
-      {/* Área de login/logout (desktop) */}
       {!isLoggedIn ? (
         <div className="conj-buttons">
           <Link to="/login">
